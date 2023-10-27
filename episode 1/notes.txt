@@ -1,0 +1,26 @@
+1) What is CDN?
+- CDN stands for content delivery network.
+- Caches content close to end users.
+- Allows quick transfer of assets needed for loading internet content such as html, javascript
+  images and videos.
+
+2) CDN React
+- A place where react library is hosted.
+
+3) What is crossorigin attribute in script tag?
+- The crossorigin attribute sets the mode of the request to an HTTP CORS Request.
+- Web pages often make requests to load resources on other servers. Here is where CORS comes in.
+- A cross-origin request is a request for a resource (e.g. style sheets, iframes, images, fonts, or scripts) 
+  from another domain.
+- CORS is used to manage cross-origin requests.
+- CORS stands for Cross-Origin Resource Sharing, and is a mechanism that allows resources on a web page 
+  to be requested from another domain outside their own domain. It defines a way of how a browser and 
+  server can interact to determine whether it is safe to allow the cross-origin request. 
+  CORS allows servers to specify who can access the assets on the server, among many other things.
+
+4) ReactDOM Render Method.
+- It takes the React Element as input which is normal javascript object and converts it to HTML.
+
+5) React is a library not a framework.
+- React can be injected in any html page for a small portion of the page.
+- for e.g a sidebar of the page, a header, or any small component on the page.
