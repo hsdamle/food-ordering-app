@@ -24,3 +24,7 @@
 5) React is a library not a framework.
 - React can be injected in any html page for a small portion of the page.
 - for e.g a sidebar of the page, a header, or any small component on the page.
+
+6) What is async and defer?
+- Async allows your script to run as soon as it's loaded, without blocking other elements on the
+  page. Defer means your script will only execute after the page has finished loading.

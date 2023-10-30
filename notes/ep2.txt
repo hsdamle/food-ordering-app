@@ -1,0 +1,76 @@
+1) Create React App
+- Create react app gives us a production ready react development environment bundled with 
+    all features such as bundling, image optimization, chunking, minifying code etc.
+
+2) NPM - (does not stand for Node Package Manager :))
+- NPM manages packages but it does not stand for Node Package Manager. Infact there is no
+    full form for NPM. You can check on the official website.
+- NPM is a package manager for javascript not node.
+
+3) Package.json
+- Contains all the dependencies required to run our project, also their versions.
+- it is a configuration for npm.
+- keeps a track of package versions.
+
+4) What is a bundler?
+- There are multiple files in our app which need to bundled together for production.
+- webpack, parcel are some examples of a bundler.
+- create react app uses webpack bundler benhind the scenes.
+
+5) Dev dependencies and normal dependencies?
+- dev dependencies only used for development.
+
+6) caret(^) and tilde(~) in package.json
+- caret means package will update to latest minor version (for e.g from 2.8.3 to 2.8.4)after npm install.
+- tilde means package will update to latest major version(for e.g from 2.8.3 to 3.0.0).
+- it is safe to use caret always.
+
+7) What is package-lock.json?
+- Keeps a record of exact version of every package installed.
+- it should be pushed to remote repository on git so that whenever we clone and do npm install
+    it will intall the exact version of the package which was installed in others machine.
+
+8) what is node_modules folder?
+- All the code that we fetched from NPM for installing packages.
+
+9) Transitive dependencies(Important question)
+- The dependencies that we install can have their own dependencies as well.
+   for e.g if we install parcel package it may require a react package as well.
+   and similarly react package can have its own dependencies and so on.
+
+10) What is npx?
+- if you want to execute a package you use npx command. 
+- similaryly when you want to install a package you use npm command.
+
+11) CDN is not a good way to ignite react in our project.Because?
+- fetching from CDN is a expensive operation.
+- it will be fast to fetch react from node modules.
+- plus if react version changes we will have to keep changing the cdn url.
+
+12) Browser scripts cannot have imports or exports? why?
+- Scripts loaded in browser are pure javascript and they don't understand imports.
+- so that is why when loading a script in browser which uses react package we need to tell
+    the browser that it is a module. By giving type attribute as "module".(type="module").
+
+13) Parcel features.
+- Creates Dev Build
+- HMR = Hot Module Replacement - Keep reacding all the files for changes and refreshes server
+- HMR uses File Watching Algorithm which is written in C++.
+- Parcel also gives Faster Builds because it uses Caching.(.parcel-cache folder).
+- Image optimization.
+- Minification
+- Bundling.
+- Compressing.
+- Consistent Hashing.
+- Code Splitting.
+- Diffrential Bundling: To support older browsers and various devices browsers like handheld,
+    mobile, desktop, etc.
+- Diagnostic
+- Error Handling.
+- allows to Host app on HTTPS.
+- Tree shaking - removes unused code for you.
+
+14) How to make our app compatible for older browser versions?
+- Using Browserlists: it is an npm package and we need to add config for the browsers we need
+    our project compatible with it.
+- for more info, read here: https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
