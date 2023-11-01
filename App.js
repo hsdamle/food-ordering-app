@@ -1,42 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import HeaderComponent from "./HeaderComponent";
 
-/****************************
- *  <div id=parent>
- *     <div id=child>
- *         <h1 id="heading1">H1 tag</h1>
- *         <h2 id="heading2">H2 tag</h2>
- *      </div>
- *      <div id=child>
- *         <h1 id="heading1">H1 tag</h1>
- *         <h2 id="heading2">H2 tag</h2>
- *     </div>
- *  </div>
- * 
- *
- * 
- * 
- * 
- * */
+// Using React Create Element
+const nestedHeader = React.createElement("div", { className: "title" }, [
+  React.createElement("h1", { id: "1" }, "Heading 1"),
+  React.createElement("h2", { id: "2" }, "Heading 2"),
+  React.createElement("h3", { id: "3" }, "Heading 3"),
+]);
 
-const parent = React.createElement("div", { id: "parent" },
-  [
-    React.createElement("div", { id: "child" },
-      [
-        React.createElement("h1", { id: "heading1" }, "I am H1 Tag"),
-        React.createElement("h2", { id: "heading2" }, "I am H2 Tag")
-      ]),
-    React.createElement("div", { id: "child2" },
-      [
-        React.createElement("h1", { id: "heading1" }, "I am H1 Tag"),
-        React.createElement("h2", { id: "heading2" }, "I am H2 Tag")
-      ])
-  ]);           
+// Using JSX
+const nestedHeaderJSX = (
+  <div className="title">
+    <h1 id="1">Heading 1</h1>
+    <h2 id="2">Heading 2</h2>
+    <h3 id="3">Heading 3</h3>
+  </div>
+);
 
-// const heading = React.createElement("h1", {
-//     "id": "heading"
-// }, "Hellow World From React"); // Creates a react element which is nothing but a normal javascript object.                       
-// console.log("heading element =>", heading);
-console.log("heading element =>", parent);
+// Using Component
+
+const NestedHeaderComponent = () => (
+  <div className="title">
+    <h1 id="1">Heading 1</h1>
+    <h2 id="2">Heading 2</h2>
+    <h3 id="3">Heading 3</h3>
+  </div>
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<NestedHeaderComponent />);

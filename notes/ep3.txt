@@ -1,0 +1,27 @@
+1) What is a react element?
+- React element is not an HTML element. When you write React.createElement it creates 
+    javascript object with metadata of the element that we want to create and when we 
+    call the render() method, HTML elements are created from this React Element Object.
+
+2) JSX
+- Javascript Syntax to create React Element.
+- JSX is not a part of React. You can create React Applications without using JSX as well
+- But JSX syntax is easy to write.
+- JSX is a convention where we merge HTML and JSX together.
+- JSX is not HTML inside Javascript!!!.
+- JSX has an HTML like syntax.
+
+3) Transpiling
+- Parcel(a webpack) takes JSX code and gives it to BABEL which transpiles it so that 
+    JS Engine can understand and render on browser.
+
+4) What is BABEL?
+- Babel is a free and open-source JavaScript transcompiler that is mainly used to convert 
+    ECMAScript 2015+ code into backwards-compatible JavaScript code that can be run by older 
+    JavaScript engines. 
+
+5) React Component
+- Every react element is a component.
+- 2 types of component i) Class based component ii) Functional Component.
+- React functional component is nothing but a Javascript Function.It is a javascript function
+    which return JSX.
