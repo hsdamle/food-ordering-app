@@ -1,9 +1,38 @@
-#heading {
-    color: red;
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
 }
-#header {
-    background-color: green;
+
+.logo {
+    width: 128px;
 }
-#footer {
-    background-color: tomato;
+
+.nav-items > ul {
+    display: flex;
+}
+
+.nav-items > ul > li {
+    padding: 20px;
+    list-style-type: none;
+}
+
+.res-logo {
+    width: 128px;
+}
+
+.res-card {
+    margin: 10px;
+    width: 320px;
+    background-color: #f0f0f0;
+}
+
+.res-card:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
 }

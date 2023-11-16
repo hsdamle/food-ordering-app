@@ -1,0 +1,6 @@
+1) Config Driven UI
+- Controlling your UI elements from Config Data fetched from Backend which is generally in 
+    JSON Format.
+
+2) Using for loop index as keys
+- React does not recommends using for loop index as keys
