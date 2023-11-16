@@ -1,0 +1,20 @@
+1) What is React Hooks?
+- Normal Javascript Function by React.
+- That function are various utility functions.
+
+2) useState()
+- used to generate state variables.
+
+3) State variables.
+- Used to maintain the current state of component.
+- whenever the state gets updated, React will re render the component.
+
+4) Reconciliation (React Fiber)
+-  
+
+5) Virtual DOM
+- Representation of Actual DOM.
+- i.e Javascript Object (React Element).
+
+6) Diff Algorithm
+- IDentifies diff between prev virtual DOM and updated Virtual DOM.
