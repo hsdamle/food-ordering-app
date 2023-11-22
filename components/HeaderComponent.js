@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 export default function HeaderComponent() {
+
+  const [isLogin, setIsLogin] = useState(false);
+
   return (
     <div className="header">
       <div className="logo-container">
@@ -13,6 +18,10 @@ export default function HeaderComponent() {
           <li>About Us</li>
           <li>Contact Us</li>
           <li>Cart</li>
+          <button className="login-btn" onClick={() => {
+            let flag = isLogin;
+            setIsLogin(!flag);
+          }}>{isLogin ? 'Logout' : 'Login'}</button>
         </ul>
       </div>
     </div>

@@ -1,0 +1,41 @@
+1) Monolith Architecture
+- When all the services like UI, API, Database, Authentication, DB Connectivity,
+Notifications are inside one same project.
+- Drawback of this project was even if we have made change in a single service(for e.g change 
+color of button), still we need to deploy the whole project.
+
+2) Microservice Architecture
+- Each Services like UI, API, DB Connectivity are maintained and deployed seprately
+- Each Service has its own project.
+- This is also known as Seperation of Concerns.
+- Also known as Single Responsibility Principle.
+- Advantage of Microservice Architecture is that you can use different tech stack for each service.
+for e.g for UI you can use React and for Backend you can use Java.
+
+3) UseEffect
+- The useEffect hook has two arguments i] callback function ii] Dependency arrray.
+- the callback function will be called after the component is rendered for the first time
+after it is being loaded.
+
+4) CORS Policy
+- Our browsers block us from calling an API from one origin to another origin.
+for e.g calling Swiggy's API from Localhost is not allowed by our browser.
+
+5) Shimmer UI 
+- for better User Experience untill the Data is fetched and rendered.
+- show UI skelton to be loaded instead of using a loader.
+
+6) Working of UseState and state variables
+- we use state variables instead of normal javascript variables because react won't be able to track normal variables.
+- when a state variable value is changed, react re-renders the component.
+
+7) How state variables are modified even when they are declared as const variables?
+- Whenever a state variable update method is called, react creates a new instance of the component and sets
+the state with the updated value. i.e react does not modify the state variable of the component but instead creates
+a new instance of the component and assigns updated value to the state variable.
+
+- Whenever you learn any concept in react or in any framework/language...you should know 
+why, how and when to use the concept.
+
+8) Why react is fast?
+- beacause of the diffing algorithm(React Fiber).
