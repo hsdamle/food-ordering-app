@@ -1,0 +1,7 @@
+1) Why we write super(props) inside constructor.
+
+2) React Lifecycle
+- Please read here: https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+
+For More Notes of Episode 08, check the bookmarks of Episode 08 in the course.
