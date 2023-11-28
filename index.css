@@ -37,6 +37,13 @@
     flex-wrap: wrap;
 }
 
+.res-link {
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: black;
+}
+
 .shim-container {
     display: flex;
     flex-wrap: wrap;

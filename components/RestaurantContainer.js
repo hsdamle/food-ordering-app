@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { restaurantListAPI } from "../utils/constants";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 export default function RestaurantContainer() {
   const [resList, setResList] = useState([]);
@@ -34,17 +35,24 @@ export default function RestaurantContainer() {
   };
 
   const searchData = () => {
-    let result = resList.filter(ele => ele?.info?.name?.toLowerCase().includes(searchText.toLowerCase()));
+    let result = resList.filter((ele) =>
+      ele?.info?.name?.toLowerCase().includes(searchText.toLowerCase())
+    );
     setFilteredList(result);
-  }
+  };
 
   return (
     <div className="body">
       <div className="filter">
-        <div className="search-bar"> 
-          <input type="text" value={searchText} onChange={(e) => {
-            setSearchText(e.target.value)
-          }}/> <button onClick={() => searchData()}>Search</button>
+        <div className="search-bar">
+          <input
+            type="text"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />{" "}
+          <button onClick={() => searchData()}>Search</button>
         </div>
         <button className="filter-btn" onClick={() => filterHighestrated()}>
           Top Rated Restaurants
@@ -53,7 +61,11 @@ export default function RestaurantContainer() {
       {resList?.length > 0 ? (
         <div className="res-container">
           {filteredList?.map((res) => {
-            return <RestaurantCard key={res?.info?.id} resData={res} />;
+            return (
+                <Link className="res-link" to={`/restaurant/${res?.info?.id}`} key={res?.info?.id} >
+                  <RestaurantCard resData={res} />
+                </Link>
+            );
           })}
         </div>
       ) : (

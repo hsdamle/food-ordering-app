@@ -1,0 +1,16 @@
+1) When is useEffect callback function called?
+- Ideally useEffect function gets called on every render but we can control this behaviour
+with the help of Dependency arrray.
+    i) useEffect() Without Dependency Array ==> Called on Every Render.
+    ii) useEffect() With Empty Dependency Array ==> Called on Intial Render.
+    iii) useEffect(() =>, [btnName]) with dependency ==> called whenever the 
+    dependency(e.g btnName) gets updated.
+
+2) Why you should never use anchor tag(<a href="/about">About</a>) to link to a route?
+- Using anchor tag will refresh the whole page.
+- you can navigate to new page without reloading the whole page- using react router dom.
+
+3) Single Page Applications vs Multi Page Applications?
+- To understand in which scenarion we should create SPA's or MPA's, Read below article:
+https://www.linkedin.com/pulse/single-page-application-vs-multi-page-what-better-your-#:~:text=Examples%20of%20Multi%20page%20applications,they%20are%20low%20on%20speed.
+
