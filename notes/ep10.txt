@@ -1,0 +1,11 @@
+1) What is sass?
+- Sass is a scripting language for CSS.
+
+2) Diffrent ways of Styling our component
+- normal CSS
+- scss/sass
+- styled components
+- Using frameworks like Material-UI, Antd, Bootstrap etc.
+- Tailwind
+
+3) what is rem unit in css?
