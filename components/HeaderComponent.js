@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 export default function HeaderComponent() {
 
   const [isLogin, setIsLogin] = useState(false);
+  const isOnline = useOnlineStatus();
 
   return (
     <div className="header">
@@ -15,6 +17,7 @@ export default function HeaderComponent() {
       </div>
       <div className="nav-items">
         <ul>
+          <li><button className={isOnline ? 'online-btn' : 'offline-btn'}></button></li>
           <li><Link to={"/"}>Home</Link></li>
           <li><Link to={"/about"}>About Us</Link></li>
           <li><Link to={"/contact"}>Contact Us</Link></li>

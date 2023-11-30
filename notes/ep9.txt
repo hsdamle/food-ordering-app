@@ -1,0 +1,12 @@
+1) Custom Hooks?
+- Nothing but Javascript functions you can create as utility.
+for e.g you can create a custom Hook to fetch API Data.
+
+2) Single Responsibility Priniciple
+- Each component should have single Responsibility.
+for e.g the RestaurantMenu component is responsible for fetching data and rendering the menu. To make it 
+compliant with Single Responsibility Priniciple we can create a custom hook to fetch the api data, so now the
+Restaurant menu will only be responsible for rendering restaurant menu.
+
+3) Chunking(Code Splitting/ Dynamic Bundling/ Lazy Loading/On Demand Loading)
+- Splliting of your bundled JS Files.

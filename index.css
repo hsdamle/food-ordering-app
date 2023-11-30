@@ -73,3 +73,17 @@
 .login-btn {
     cursor: pointer;
 }
+
+.online-btn {
+    background-color: greenyellow;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+}
+
+.offline-btn {
+    background-color: grey;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+}
