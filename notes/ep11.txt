@@ -1,0 +1,19 @@
+1) What is Higher Order Component?
+- Normal Javascript Function which takes a component as Input, enhances the component and returns 
+  the enhanced component.
+
+2) Controlled Component
+- A component which does not have its own state and is controlled by parent component by passing props 
+is known as controlled component.
+
+3) What is props drilling
+- Passing the props from one component to the bottom of the tree or passing it in multiple child and then
+again these child passing down to their childs is called props drilling.
+i.e passing the props down to multiple levels.
+
+4) React Context API
+- it is used to avoid props drilling and to access data globally i.e from any component in our 
+application without prop drilling.
+
+E.g User auth token can be stored using React Context API which will be used globally in our application.
+- You should only use context for data which you want to use globally/or inside multiple sibling components.

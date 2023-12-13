@@ -13,8 +13,10 @@ export default function useRestaurantMenu(id) {
     let data = await fetch(restaurantMenuAPI + `&restaurantId=${id}`);
     let resMenuData = await data.json();
     let menuList =
-      resMenuData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
-        ?.card?.card?.itemCards;
+      resMenuData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+    menuList = menuList.filter(menu => {
+      return menu?.card?.card?.['@type']?.includes('ItemCategory')
+    });
     setResMenu(menuList);
   };
 

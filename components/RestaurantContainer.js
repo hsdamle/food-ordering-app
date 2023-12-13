@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { isDiscountLabel } from "./RestaurantCard";
 import { restaurantListAPI } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -8,6 +8,7 @@ export default function RestaurantContainer() {
   const [resList, setResList] = useState([]);
   const [filteredList, setFilteredList] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const RestaurantCardOffer = isDiscountLabel(RestaurantCard);
 
   const fetchData = async () => {
     const result = await fetch(restaurantListAPI);
@@ -18,7 +19,6 @@ export default function RestaurantContainer() {
       if (ele?.card?.card?.id === "top_brands_for_you")
         resData = ele?.card?.card?.gridElements?.infoWithStyle?.restaurants;
     }
-
     setResList(resData);
     setFilteredList(resData);
   };
@@ -62,9 +62,18 @@ export default function RestaurantContainer() {
         <div className="res-container">
           {filteredList?.map((res) => {
             return (
-                <Link className="res-link" to={`/restaurant/${res?.info?.id}`} key={res?.info?.id} >
+              <Link
+                className="res-link"
+                to={`/restaurant/${res?.info?.id}`}
+                key={res?.info?.id}
+              >
+                {res?.info?.aggregatedDiscountInfoV3 &&
+                Object.keys(res?.info?.aggregatedDiscountInfoV3).length > 0 ? (
+                  <RestaurantCardOffer resData={res} />
+                ) : (
                   <RestaurantCard resData={res} />
-                </Link>
+                )}
+              </Link>
             );
           })}
         </div>
