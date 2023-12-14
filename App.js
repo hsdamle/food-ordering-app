@@ -9,6 +9,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import ErrorComponent from "./components/ErrorComponent";
 import useOnlineStatus from "./utils/useOnlineStatus";
+import UserContext from "./utils/UserContext";
 
 const AppLayout = () => {
   const isOnline = useOnlineStatus();
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: <UserContext.Provider value={{ username: "Akshay "}}><Contact /></UserContext.Provider>,
         errorElement: <ErrorComponent/>
       },
       {

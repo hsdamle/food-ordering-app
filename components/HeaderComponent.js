@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 export default function HeaderComponent() {
 
   const [isLogin, setIsLogin] = useState(false);
   const isOnline = useOnlineStatus();
+  const userInfo = useContext(UserContext);
 
   return (
     <div className="header">
@@ -26,6 +28,7 @@ export default function HeaderComponent() {
             let flag = isLogin;
             setIsLogin(!flag);
           }}>{isLogin ? 'Logout' : 'Login'}</button>
+          <li>Username: {userInfo.username}</li>
         </ul>
       </div>
     </div>

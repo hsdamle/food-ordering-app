@@ -22,7 +22,9 @@
   "homepage": "https://github.com/hsdamle/react-practice#readme",
   "devDependencies": {
     "parcel": "^2.10.1",
-    "process": "^0.11.10"
+    "postcss": "^8.4.32",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.6"
   },
   "dependencies": {
     "react": "^18.2.0",
