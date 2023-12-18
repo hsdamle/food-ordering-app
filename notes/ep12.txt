@@ -1,0 +1,14 @@
+1) What is Redux?
+- State management library to handle data in large applications with multiple components.
+- Redux is not a part of react. We can develop web applications without using Redux as well.
+- Redux is a UI State management library which is also available for other frameworks like angular.
+- Redux Toolkit(RTK) is the newer way of writing Redux Logic which is much more simplified than
+previous one.
+
+2) Redux architecture with example
+Example: in a food ordering app when a user selects a menu from item it should get added to the cart.
+    i)  Create a Redux Store.
+    ii) Add Cart Slice to the Redux Store.
+    iii) When a user clicks on add to cart button, an Action(add item) is dispatched which 
+        calls a reducer, and this reducer will update the cart Slice in our Store.
+    iv) Now if we want to read that cart value, we subscribe to the cart using a selector.

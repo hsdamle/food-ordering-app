@@ -2,12 +2,17 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 export default function HeaderComponent() {
 
   const [isLogin, setIsLogin] = useState(false);
   const isOnline = useOnlineStatus();
   const userInfo = useContext(UserContext);
+  // Always subscribe to specific slice state from the store. 
+  // Avoid subsctibing to the whole store for better performance.
+  const items = useSelector(store => store.cart.items);
+  console.log("Cart Items:", items);
 
   return (
     <div className="header">
@@ -23,7 +28,7 @@ export default function HeaderComponent() {
           <li><Link to={"/"}>Home</Link></li>
           <li><Link to={"/about"}>About Us</Link></li>
           <li><Link to={"/contact"}>Contact Us</Link></li>
-          <li>Cart</li>
+          <li>Cart ({items.length})</li>
           <button className="login-btn" onClick={() => {
             let flag = isLogin;
             setIsLogin(!flag);

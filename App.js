@@ -10,14 +10,18 @@ import Contact from "./components/Contact";
 import ErrorComponent from "./components/ErrorComponent";
 import useOnlineStatus from "./utils/useOnlineStatus";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import store from "./utils/Store";
 
 const AppLayout = () => {
   const isOnline = useOnlineStatus();
 return(
-  <div className="app-layout">
-    <HeaderComponent />
-    {isOnline ? <Outlet/> : <h1>Please connect to the interet and try again!</h1>}
-  </div>
+  <Provider store={store}>
+    <div className="app-layout">
+      <HeaderComponent />
+      {isOnline ? <Outlet/> : <h1>Please connect to the interet and try again!</h1>}
+    </div>
+  </Provider>
 );
 }
 
