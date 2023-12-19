@@ -12,6 +12,7 @@ import useOnlineStatus from "./utils/useOnlineStatus";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import store from "./utils/Store";
+import MemoizationExample from "./components/MemoizationExample";
 
 const AppLayout = () => {
   const isOnline = useOnlineStatus();
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
       {
         path: "/restaurant/:id",
         element: <Suspense fallback={<h1>Loading</h1>}><RestaurantMenu /></Suspense>,
+        errorElement: <ErrorComponent/>
+      },
+      {
+        path: "/memoization-example",
+        element: <MemoizationExample />,
         errorElement: <ErrorComponent/>
       }
     ]
