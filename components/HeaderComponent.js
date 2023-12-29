@@ -12,7 +12,6 @@ export default function HeaderComponent() {
   // Always subscribe to specific slice state from the store. 
   // Avoid subsctibing to the whole store for better performance.
   const items = useSelector(store => store.cart.items);
-  console.log("Cart Items:", items);
 
   return (
     <div className="header">

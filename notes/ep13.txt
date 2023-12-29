@@ -1,0 +1,30 @@
+1) Types of Testing (developer)
+- Unit Testing
+- Integration Testing
+- End to end testing
+
+2) Unit testing
+- test your react components in isolation.
+
+3) Integration Testing
+- testing done between components.i.e testing the Integration of the components.
+
+4) E2E(end to end testing)
+- Testing whole application flow right from when the user log in to the application untill user 
+leaves the application.
+- for this kind of testing we require tools like cypress, selenium etc.
+
+5) Various types of testing library'selenium
+- React Testing Library(built on top of DOM testing library and uses Jest library behind the scenes).
+
+6) describe method Jest
+- you can use describe method to group test cases.
+
+7) how to check if a component is rendered on the screen or not?
+- 3 Steps of writing test cases
+   i) Rendering the component.(use render method from "@testing-library/react").
+   ii) Querying the component.(use screen method from "@testing-library/react" 
+        e.g const heading = screen.getByRole("heading"))
+   iii) Assertion (expect(heading).toBeInTheDocument()) - toBeInTheDocument is a method from @testing-library/jest-dom
+
+8) it() and test() method are one and the same.it() is an alias for test().

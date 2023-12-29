@@ -2,7 +2,7 @@ import { cloudinaryImageURL } from "../utils/constants";
 
 export default function RestaurantCard({ resData }) {
   return (
-    <div className="res-card">
+    <div className="res-card" data-testid="resCard">
       <img
         src={`${cloudinaryImageURL}${resData?.info?.cloudinaryImageId}`}
         className="res-logo"
@@ -18,7 +18,7 @@ export default function RestaurantCard({ resData }) {
 }
 
 // Creating a Higher Order Component for Restaurant Card to add offers label
-export const isDiscountLabel = (RestaurantCard) => {
+export const withDiscountLabel = (RestaurantCard) => {
   //HOC returns a new component and props are received inside this component
   return (props) => {
     return (

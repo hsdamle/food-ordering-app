@@ -6,6 +6,7 @@ export default function Contact() {
 
   return (
     <div>
+      <label>Welcome</label>
       <h1>Contact Us Page: {userInfo.username}</h1>
     </div>
   );

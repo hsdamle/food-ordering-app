@@ -7,7 +7,7 @@ export default function RestaurantCategory({
   setShowIndex,
 }) {
   return (
-    <div className="menu-div">
+    <div className="menu-div" data-testid="resCategory">
       <div className="menu-category">
         <h3 onClick={() => setShowIndex()}>{resCategory?.card?.card?.title}</h3>
       </div>

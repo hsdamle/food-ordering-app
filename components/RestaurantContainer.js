@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import RestaurantCard, { isDiscountLabel } from "./RestaurantCard";
+import RestaurantCard, { withDiscountLabel } from "./RestaurantCard";
 import { restaurantListAPI } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -8,7 +8,8 @@ export default function RestaurantContainer() {
   const [resList, setResList] = useState([]);
   const [filteredList, setFilteredList] = useState([]);
   const [searchText, setSearchText] = useState("");
-  const RestaurantCardOffer = isDiscountLabel(RestaurantCard);
+  // Creating a Higher Order Component - with Discount Label
+  const RestaurantCardOffer = withDiscountLabel(RestaurantCard);
 
   const fetchData = async () => {
     const result = await fetch(restaurantListAPI);
@@ -31,7 +32,7 @@ export default function RestaurantContainer() {
     const data = resList.filter((ele) => {
       return ele?.info?.avgRating > 4.5;
     });
-    setResList(data);
+    setFilteredList(data);
   };
 
   const searchData = () => {
@@ -47,6 +48,7 @@ export default function RestaurantContainer() {
         <div className="search-bar">
           <input
             type="text"
+            data-testid="searchInput"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -59,7 +61,7 @@ export default function RestaurantContainer() {
         </button>
       </div>
       {resList?.length > 0 ? (
-        <div className="res-container">
+        <div className="res-container"> 
           {filteredList?.map((res) => {
             return (
               <Link
