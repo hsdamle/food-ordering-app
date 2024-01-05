@@ -25,3 +25,4 @@ Food Ordering App Clone with Following Features:
 - Used Context API to globally store User Info
 - Used Redux Toolkit to Manage Add to Cart Flow.
 - Create Higher Order Component to add Discount label to Restaurant Card.
+- Implemented Unit Testing & Integration Testing with >90% Test Coverage.
