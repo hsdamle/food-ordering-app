@@ -3,8 +3,8 @@
 with the help of Dependency arrray.
     i) useEffect() Without Dependency Array ==> Called on Every Render.
     ii) useEffect() With Empty Dependency Array ==> Called on Intial Render.
-    iii) useEffect(() =>, [btnName]) with dependency ==> called whenever the 
-    dependency(e.g btnName) gets updated.
+    iii) useEffect(() =>, [btnName]) with dependency ==> Called on intial render + whenever any state 
+    from dependency array(e.g btnName) gets updated.
 
 2) Why you should never use anchor tag(<a href="/about">About</a>) to link to a route?
 - Using anchor tag will refresh the whole page.
